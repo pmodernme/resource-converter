@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My App</string>
+    <plurals name="num_goats">
+        <item quantity="one">%d Goat</item>
+        <item quantity="other">%d Goats</item>
+    </plurals>
+    <string name="goat_name_format">%1$s the Goat</string>
+    <plurals name="num_horses">
+        <item quantity="one">%d Horse</item>
+        <item quantity="other">%d Horses</item>
+    </plurals>
+    <string name="horse_name_format">%1$s the Horse</string>
+</resources>

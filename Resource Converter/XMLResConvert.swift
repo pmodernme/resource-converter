@@ -39,7 +39,8 @@ struct XMLStringsResConvert: Command {
     func loadXML(path: String) -> String {
         guard let data = FileManager.default.contents(atPath: path),
               let xml = String(data: data, encoding: .utf8) else {
-                  fatalError("Could not load contents of xml file at path: \(path)")
+                  print("Could not load contents of xml file at path: \(path)")
+                  exit(1)
               }
         return xml
     }
