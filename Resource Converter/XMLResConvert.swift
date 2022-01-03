@@ -52,7 +52,8 @@ struct XMLStringsResConvert: Command {
         let result = regex
             .matches(in: xml, options: [], range: nsrange).compactMap({ match -> String? in
                 guard let name = getString(source: xml, match: match, key: "name"),
-                      let value = getString(source: xml, match: match, key: "value")
+                      let value = getString(source: xml, match: match, key: "value")?
+                        .replacingOccurrences(of: "%1$s", with: "%@")
                 else {
                     print("Could not parse a match. Ignoring...")
                     return nil
