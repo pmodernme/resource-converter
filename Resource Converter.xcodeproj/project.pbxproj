@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF487210278266B3008EF9F8 /* ConsoleKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF48720F278266B3008EF9F8 /* ConsoleKit */; };
+		BF487212278267C7008EF9F8 /* XMLResConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF487211278267C7008EF9F8 /* XMLResConvert.swift */; };
 		BF963DAF2782569E0045E6B6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF963DAE2782569E0045E6B6 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +25,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BF963DAB2782569E0045E6B6 /* Resource Converter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Resource Converter"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF48720D2782641C008EF9F8 /* samples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = samples; sourceTree = "<group>"; };
+		BF487211278267C7008EF9F8 /* XMLResConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLResConvert.swift; sourceTree = "<group>"; };
+		BF963DAB2782569E0045E6B6 /* ResourceConverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ResourceConverter; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF963DAE2782569E0045E6B6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF487210278266B3008EF9F8 /* ConsoleKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,7 +54,7 @@
 		BF963DAC2782569E0045E6B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF963DAB2782569E0045E6B6 /* Resource Converter */,
+				BF963DAB2782569E0045E6B6 /* ResourceConverter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				BF963DAE2782569E0045E6B6 /* main.swift */,
+				BF487211278267C7008EF9F8 /* XMLResConvert.swift */,
+				BF48720D2782641C008EF9F8 /* samples */,
 			);
 			path = "Resource Converter";
 			sourceTree = "<group>";
@@ -65,9 +72,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF963DAA2782569E0045E6B6 /* Resource Converter */ = {
+		BF963DAA2782569E0045E6B6 /* ResourceConverter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF963DB22782569E0045E6B6 /* Build configuration list for PBXNativeTarget "Resource Converter" */;
+			buildConfigurationList = BF963DB22782569E0045E6B6 /* Build configuration list for PBXNativeTarget "ResourceConverter" */;
 			buildPhases = (
 				BF963DA72782569E0045E6B6 /* Sources */,
 				BF963DA82782569E0045E6B6 /* Frameworks */,
@@ -77,9 +84,12 @@
 			);
 			dependencies = (
 			);
-			name = "Resource Converter";
+			name = ResourceConverter;
+			packageProductDependencies = (
+				BF48720F278266B3008EF9F8 /* ConsoleKit */,
+			);
 			productName = "Resource Converter";
-			productReference = BF963DAB2782569E0045E6B6 /* Resource Converter */;
+			productReference = BF963DAB2782569E0045E6B6 /* ResourceConverter */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -106,11 +116,14 @@
 				Base,
 			);
 			mainGroup = BF963DA22782569E0045E6B6;
+			packageReferences = (
+				BF48720E278266B3008EF9F8 /* XCRemoteSwiftPackageReference "console-kit" */,
+			);
 			productRefGroup = BF963DAC2782569E0045E6B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF963DAA2782569E0045E6B6 /* Resource Converter */,
+				BF963DAA2782569E0045E6B6 /* ResourceConverter */,
 			);
 		};
 /* End PBXProject section */
@@ -120,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF487212278267C7008EF9F8 /* XMLResConvert.swift in Sources */,
 				BF963DAF2782569E0045E6B6 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +262,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQ84298H37;
 				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.zvb.Resource-Converter";
+				PRODUCT_NAME = "${TARGET_NAME}";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -259,7 +274,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQ84298H37;
 				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.zvb.Resource-Converter";
+				PRODUCT_NAME = "${TARGET_NAME}";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -276,7 +292,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF963DB22782569E0045E6B6 /* Build configuration list for PBXNativeTarget "Resource Converter" */ = {
+		BF963DB22782569E0045E6B6 /* Build configuration list for PBXNativeTarget "ResourceConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF963DB32782569E0045E6B6 /* Debug */,
@@ -286,6 +302,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF48720E278266B3008EF9F8 /* XCRemoteSwiftPackageReference "console-kit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/console-kit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF48720F278266B3008EF9F8 /* ConsoleKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF48720E278266B3008EF9F8 /* XCRemoteSwiftPackageReference "console-kit" */;
+			productName = ConsoleKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF963DA32782569E0045E6B6 /* Project object */;
 }
