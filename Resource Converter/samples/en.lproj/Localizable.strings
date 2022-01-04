@@ -1,3 +1,3 @@
 "app_name" = "My App";
-"goat_name_format%@" = "%@ the Goat";
-"horse_name_format%@" = "%@ the Horse";
+"goat_name_format %@" = "%@ the Goat";
+"horse_name_format %@" = "%@ the Horse";

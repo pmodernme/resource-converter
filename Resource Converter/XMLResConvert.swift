@@ -62,7 +62,7 @@ struct XMLStringsResConvert: Command {
                 let numberOfStringFormatSpecifiers = value.components(separatedBy: "%1$s").count-1
                 if numberOfStringFormatSpecifiers > 0 {
                     name.insert(
-                        contentsOf: (0..<numberOfStringFormatSpecifiers).map({_ in "%@"}).joined(),
+                        contentsOf: (0..<numberOfStringFormatSpecifiers).map({_ in " %@"}).joined(),
                         at: name.index(before: name.endIndex))
                     value = value.replacingOccurrences(of: "%1$s", with: "%@")
                 }
@@ -113,7 +113,7 @@ struct XMLStringsResConvert: Command {
                     print("Could not parse a match. Ignoring...")
                     return nil
                 }
-                name.insert(contentsOf: "%d", at: name.index(before: name.endIndex))
+                name.insert(contentsOf: " %d", at: name.index(before: name.endIndex))
                 
                 let itemResults = itemsRegex
                     .matches(in: xml, options: [], range: match.range(withName: "items"))
