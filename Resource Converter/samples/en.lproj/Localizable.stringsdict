@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
-        <key>num_goats %d</key>
+        <key>num_goats %lld</key>
         <dict>
             <key>NSStringLocalizedFormatKey</key>
             <string>%#@COUNT@</string>
@@ -11,14 +11,14 @@
                 <key>NSStringFormatSpecTypeKey</key>
                 <string>NSStringPluralRuleType</string>
                 <key>NSStringFormatValueTypeKey</key>
-                <string>d</string>
+                <string>lld</string>
                 <key>one</key>
-                <string>%d Goat</string>
+                <string>%lld Goat</string>
                 <key>other</key>
-                <string>%d Goats</string>
+                <string>%lld Goats</string>
             </dict>
         </dict>
-        <key>num_horses %d</key>
+        <key>num_horses %lld</key>
         <dict>
             <key>NSStringLocalizedFormatKey</key>
             <string>%#@COUNT@</string>
@@ -27,11 +27,11 @@
                 <key>NSStringFormatSpecTypeKey</key>
                 <string>NSStringPluralRuleType</string>
                 <key>NSStringFormatValueTypeKey</key>
-                <string>d</string>
+                <string>lld</string>
                 <key>one</key>
-                <string>%d Horse</string>
+                <string>%lld Horse</string>
                 <key>other</key>
-                <string>%d Horses</string>
+                <string>%lld Horses</string>
             </dict>
         </dict>
     </dict>

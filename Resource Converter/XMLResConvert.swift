@@ -113,13 +113,14 @@ struct XMLStringsResConvert: Command {
                     print("Could not parse a match. Ignoring...")
                     return nil
                 }
-                name += " %d"
+                name += " %lld"
                 
                 let itemResults = itemsRegex
                     .matches(in: xml, options: [], range: match.range(withName: "items"))
                     .compactMap({ match -> String? in
                         guard let quantity = getString(source: xml, match: match, key: "quantity"),
-                              let value = getString(source: xml, match: match, key: "value")
+                              let value = getString(source: xml, match: match, key: "value")?
+                                .replacingOccurrences(of: "%d", with: "%lld")
                         else {
                             return nil
                         }
@@ -157,7 +158,7 @@ struct XMLStringsResConvert: Command {
                                 <key>NSStringFormatSpecTypeKey</key>
                                 <string>NSStringPluralRuleType</string>
                                 <key>NSStringFormatValueTypeKey</key>
-                                <string>d</string>
+                                <string>lld</string>
                 \(itemResults)
                             </dict>
                         </dict>
