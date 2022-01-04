@@ -51,13 +51,22 @@ struct XMLStringsResConvert: Command {
         
         let result = regex
             .matches(in: xml, options: [], range: nsrange).compactMap({ match -> String? in
-                guard let name = getString(source: xml, match: match, key: "name"),
-                      let value = getString(source: xml, match: match, key: "value")?
-                        .replacingOccurrences(of: "%1$s", with: "%@")
+                guard let nameSub = getString(source: xml, match: match, key: "name"),
+                      let valueSub = getString(source: xml, match: match, key: "value")
                 else {
                     print("Could not parse a match. Ignoring...")
                     return nil
                 }
+                var name = String(nameSub)
+                var value = String(valueSub)
+                let numberOfStringFormatSpecifiers = value.components(separatedBy: "%1$s").count-1
+                if numberOfStringFormatSpecifiers > 0 {
+                    name.insert(
+                        contentsOf: (0..<numberOfStringFormatSpecifiers).map({_ in "%@"}).joined(),
+                        at: name.index(before: name.endIndex))
+                    value = value.replacingOccurrences(of: "%1$s", with: "%@")
+                }
+                
                 return "\(name) = \"\(value)\";"
             })
             .joined(separator: "\n")
@@ -100,11 +109,11 @@ struct XMLStringsResConvert: Command {
         let body = pluralsRegex
             .matches(in: xml, options: [], range: pluralsNSRange)
             .compactMap({ match -> String? in
-                guard let name = getString(source: xml, match: match, key: "name")
-                else {
+                guard var name = getString(source: xml, match: match, key: "name") else {
                     print("Could not parse a match. Ignoring...")
                     return nil
                 }
+                name.insert(contentsOf: "%d", at: name.index(before: name.endIndex))
                 
                 let itemResults = itemsRegex
                     .matches(in: xml, options: [], range: match.range(withName: "items"))
