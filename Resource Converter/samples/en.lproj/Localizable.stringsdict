@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
-        <key>"num_goats %d"</key>
+        <key>num_goats %d</key>
         <dict>
             <key>NSStringLocalizedFormatKey</key>
             <string>%#@COUNT@</string>
@@ -18,7 +18,7 @@
                 <string>%d Goats</string>
             </dict>
         </dict>
-        <key>"num_horses %d"</key>
+        <key>num_horses %d</key>
         <dict>
             <key>NSStringLocalizedFormatKey</key>
             <string>%#@COUNT@</string>

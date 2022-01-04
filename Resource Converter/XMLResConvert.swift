@@ -113,7 +113,7 @@ struct XMLStringsResConvert: Command {
                     print("Could not parse a match. Ignoring...")
                     return nil
                 }
-                name.insert(contentsOf: " %d", at: name.index(before: name.endIndex))
+                name += " %d"
                 
                 let itemResults = itemsRegex
                     .matches(in: xml, options: [], range: match.range(withName: "items"))
@@ -191,9 +191,9 @@ struct XMLStringsResConvert: Command {
 
 let pluralGroupPattern = #"""
 (?xi)
-(?-x:<plurals\s+name=)
-(?<name>".*")
-(?-x:>)
+(?-x:<plurals\s+name=")
+(?<name>.*)
+(?-x:">)
 (?<items>[\s\S]*?)
 (?-x:<\/plurals>)
 """#
