@@ -5,5 +5,5 @@ Command line app that translates Android strings resource files into iOS and Mac
 ## Usage
 
 ```
-ResourceConverter -o <path/to/strings.xml> <path/to/[lang].lproj/>
+ResourceConverter strings -o path/to/strings.xml path/to/lang.lproj/
 ```
