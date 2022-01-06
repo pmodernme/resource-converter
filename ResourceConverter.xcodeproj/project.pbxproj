@@ -9,25 +9,28 @@
 /* Begin PBXBuildFile section */
 		BF487210278266B3008EF9F8 /* ConsoleKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF48720F278266B3008EF9F8 /* ConsoleKit */; };
 		BF487212278267C7008EF9F8 /* XMLResConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF487211278267C7008EF9F8 /* XMLResConvert.swift */; };
+		BF5DCB6627866C6C00D077B7 /* ResourceConverter in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF963DAB2782569E0045E6B6 /* ResourceConverter */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		BF963DAF2782569E0045E6B6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF963DAE2782569E0045E6B6 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		BF963DA92782569E0045E6B6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = "${SRCROOT}/Products";
 			dstSubfolderSpec = 0;
 			files = (
+				BF5DCB6627866C6C00D077B7 /* ResourceConverter in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BF350BC72783BA6400D24706 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		BF48720D2782641C008EF9F8 /* samples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = samples; sourceTree = "<group>"; };
+		BF48720D2782641C008EF9F8 /* Samples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Samples; sourceTree = "<group>"; };
 		BF487211278267C7008EF9F8 /* XMLResConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLResConvert.swift; sourceTree = "<group>"; };
+		BF5DCB6827866CFA00D077B7 /* Products */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Products; sourceTree = "<group>"; };
 		BF963DAB2782569E0045E6B6 /* ResourceConverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ResourceConverter; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF963DAE2782569E0045E6B6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,11 +47,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF5DCB652786677700D077B7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BF963DAD2782569E0045E6B6 /* ResourceConverter */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		BF963DA22782569E0045E6B6 = {
 			isa = PBXGroup;
 			children = (
 				BF350BC72783BA6400D24706 /* README.md */,
-				BF963DAD2782569E0045E6B6 /* Resource Converter */,
+				BF5DCB652786677700D077B7 /* Sources */,
+				BF48720D2782641C008EF9F8 /* Samples */,
+				BF5DCB6827866CFA00D077B7 /* Products */,
 				BF963DAC2782569E0045E6B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,14 +74,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BF963DAD2782569E0045E6B6 /* Resource Converter */ = {
+		BF963DAD2782569E0045E6B6 /* ResourceConverter */ = {
 			isa = PBXGroup;
 			children = (
 				BF963DAE2782569E0045E6B6 /* main.swift */,
 				BF487211278267C7008EF9F8 /* XMLResConvert.swift */,
-				BF48720D2782641C008EF9F8 /* samples */,
 			);
-			path = "Resource Converter";
+			path = ResourceConverter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF963DA62782569E0045E6B6 /* Build configuration list for PBXProject "Resource Converter" */;
+			buildConfigurationList = BF963DA62782569E0045E6B6 /* Build configuration list for PBXProject "ResourceConverter" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -194,7 +206,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -285,7 +297,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF963DA62782569E0045E6B6 /* Build configuration list for PBXProject "Resource Converter" */ = {
+		BF963DA62782569E0045E6B6 /* Build configuration list for PBXProject "ResourceConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF963DB02782569E0045E6B6 /* Debug */,

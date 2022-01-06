@@ -17,7 +17,7 @@
                BlueprintIdentifier = "BF963DAA2782569E0045E6B6"
                BuildableName = "ResourceConverter"
                BlueprintName = "ResourceConverter"
-               ReferencedContainer = "container:Resource Converter.xcodeproj">
+               ReferencedContainer = "container:ResourceConverter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,7 +48,7 @@
             BlueprintIdentifier = "BF963DAA2782569E0045E6B6"
             BuildableName = "ResourceConverter"
             BlueprintName = "ResourceConverter"
-            ReferencedContainer = "container:Resource Converter.xcodeproj">
+            ReferencedContainer = "container:ResourceConverter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -61,11 +61,11 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "Resource\ Converter/samples/strings/strings.xml"
+            argument = "samples/strings/strings.xml"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "Resource\ Converter/samples/en.lproj/"
+            argument = "samples/en.lproj/"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
@@ -83,7 +83,7 @@
             BlueprintIdentifier = "BF963DAA2782569E0045E6B6"
             BuildableName = "ResourceConverter"
             BlueprintName = "ResourceConverter"
-            ReferencedContainer = "container:Resource Converter.xcodeproj">
+            ReferencedContainer = "container:ResourceConverter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
